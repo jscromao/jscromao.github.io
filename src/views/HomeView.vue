@@ -13,6 +13,8 @@ import LanguageItem from "@/components/LanguageItem.vue";
 //import EcosystemIcon from "./icons/IconEcosystem.vue";
 //import CommunityIcon from "./icons/IconCommunity.vue";
 //import SupportIcon from "./icons/IconSupport.vue";
+
+import ProgressColumn from "@/components/ProgressColumn.vue";
 </script>
 
 <template>
@@ -98,7 +100,33 @@ import LanguageItem from "@/components/LanguageItem.vue";
 		<hr class="m-0" />
 
 		<section class="resume-section" id="skills">
-			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Skills</h2>
+			<h2 class="mb-5 text-green-900/90 flex flex-row items-center gap-x-4">
+				<div class="text-5xl uppercase font-[700]">Skills</div>
+
+				<div class="flex flex-col justify-center w-48 text-lg text-slate-600 font-[500]">
+					<div class="border border-b-0 border-slate-500 text-center">Legend:</div>
+					<div class="grid grid-cols-2 gap-x-0 mb-4 border border-slate-500" style="text-decoration: none">
+						<div class="grid grid-cols-5 place-content-between content-between border-r border-slate-500 px-2.5 py-1 gap-x-2.5">
+							<ProgressColumn
+								:progress="75"
+								class_column="col-span-1 inline-block w-2 h-full bg-gray-800 rounded-sm"
+								class_progress="bg-emerald-400"
+								name="Recency of Use"
+							/>
+							<span class="col-span-4 text-justify">Recency Level</span>
+						</div>
+						<div class="grid grid-cols-5 px-2.5 py-1 gap-x-2.5">
+							<ProgressColumn
+								:progress="75"
+								class_column="col-span-1 inline-block w-2 h-full bg-gray-800 rounded-sm"
+								class_progress="bg-blue-400"
+								name="Proficiency Level"
+							/>
+							<span class="col-span-4">Proficiency Level</span>
+						</div>
+					</div>
+				</div>
+			</h2>
 
 			<div class="flex flex-col gap-y-10 justify-center">
 				<!--<div class="grid grid-cols-3 place-content-center gap-3 lg:grid-cols-6 lg:gap-6 w-4/5">-->
