@@ -28,7 +28,9 @@ console.log(props.icon);
 
 <template>
 	<!--<div class="flex flex-row gap-x-0.5 items-center justify-between h-18 aspect-square border rounded border-gray-500/50 p-0.5">-->
-	<div class="grid grid-cols-7 gap-x-0.5 items-center justify-between h-18 aspect-square border rounded border-gray-500/50 p-0.5">
+	<div
+		class="mx-auto grid grid-cols-7 gap-x-0.5 items-center justify-between h-18 aspect-square border rounded border-gray-500/50 p-0.5 max-h-28"
+	>
 		<!--<div class="inline-block border rounded border-gray-500/50 p-1 h-full aspect-square">-->
 		<div class="h-full w-full flex items-center justify-center">
 			<ProgressColumn
@@ -39,10 +41,15 @@ console.log(props.icon);
 			/>
 		</div>
 		<div v-if="hasIcon" class="col-span-5 flex flex-row flex-1 h-full items-center justify-center text-2xl font-semibold w-full">
-			<i :title="tech" :class="`fab ${icon} w-full aspect-square h-auto`"></i>
+			<div class="flex flex-col-reverse">
+				<div class="flex flex-row items-start justify-center text-base sm:text-lg md:text-xl lg:text-2xl font-semibold">
+					{{ tech }}
+				</div>
+				<i :title="tech" :class="`fab ${icon} w-full aspect-square h-auto`"></i>
+			</div>
 		</div>
 		<div v-else class="col-span-5 flex flex-col h-full items-center justify-center align-middle text-2xl font-semibold w-full">
-			<div class="inline-flex flex-row h-fit items-start justify-center text-2xl font-semibold">
+			<div class="inline-flex flex-row h-fit items-start justify-center text-base sm:text-lg md:text-xl lg:text-2xl font-semibold">
 				<span>{{ tech }}</span>
 			</div>
 		</div>

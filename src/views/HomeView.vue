@@ -50,7 +50,7 @@ import LanguageItem from "@/components/LanguageItem.vue";
 		<section class="resume-section [&_ul]:list-disc" id="traits">
 			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Traits &amp; Summary</h2>
 
-			<ul class="fa-ul mb-0 !list-none text-lg">
+			<ul class="fa-ul mb-0 !list-none text-lg space-y-1.5">
 				<li>
 					<span class="fa-li"><i class="fas fa-person-running"></i></span>
 					<span>Entrepreneurial spirit, with experience in self-motivation and project management.</span><br />
@@ -71,7 +71,8 @@ import LanguageItem from "@/components/LanguageItem.vue";
 						Decent background in Web Development, with some full-stack experience in and a focus on backend dev. </span
 					><br />
 					<span class=""
-						>Extensive experience in PHP, JavaScript and TypeScript, and several versions of well-known frameworks.
+						>Extensive experience in PHP, Node.js, JavaScript and TypeScript as well as several versions of well-known
+						frameworks.
 					</span>
 				</li>
 				<li>
@@ -94,7 +95,47 @@ import LanguageItem from "@/components/LanguageItem.vue";
 			</ul>
 		</section>
 
-		<hr class="border-red-400" />
+		<hr class="m-0" />
+
+		<section class="resume-section" id="skills">
+			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Skills</h2>
+
+			<div class="flex flex-col gap-y-10 justify-center">
+				<!--<div class="grid grid-cols-3 place-content-center gap-3 lg:grid-cols-6 lg:gap-6 w-4/5">-->
+				<div
+					class="grid grid-cols-3 place-content-center justify-center gap-3 md:grid-cols-6 md:gap-6 w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%]"
+				>
+					<TechItem tech="Laravel" icon="fa-laravel" :recency="40" :proficiency="75" />
+					<TechItem tech="React" icon="fa-react" :recency="60" :proficiency="90" />
+					<TechItem tech="Vue.js" icon="fa-vuejs" :recency="80" :proficiency="80" />
+					<TechItem tech="Angular" icon="fa-angular" :recency="15" :proficiency="66" />
+					<TechItem tech="Svelte" :recency="90" :proficiency="95" />
+					<TechItem tech="Solid" :recency="100" :proficiency="99" />
+				</div>
+
+				<div
+					class="grid grid-cols-3 place-content-center justify-center gap-3 md:grid-cols-6 md:gap-6 w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%]"
+				>
+					<TechItem tech="JS / TS" icon="fa-js-square" :recency="99" :proficiency="99" />
+					<TechItem tech="PHP" icon="fa-php" :recency="45" :proficiency="90" />
+					<TechItem tech="Java" icon="fa-java" :recency="38" :proficiency="80" />
+					<TechItem tech="Python" icon="fa-python" :recency="80" :proficiency="80" />
+					<TechItem tech="Rust" icon="fa-rust" :recency="70" :proficiency="75" />
+					<TechItem tech="C#" :recency="15" :proficiency="66" />
+				</div>
+
+				<div
+					class="grid grid-cols-3 place-content-center justify-center gap-3 md:grid-cols-6 md:gap-6 w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%]"
+				>
+					<TechItem tech="HTML5" icon="fa-html5" :recency="99" :proficiency="99" />
+					<TechItem tech="CSS3" icon="fa-css3-alt" :recency="95" :proficiency="90" />
+					<TechItem tech="NPM" icon="fa-npm" :recency="99" :proficiency="95" />
+					<TechItem tech="Node.js" icon="fa-node-js" :recency="99" :proficiency="90" />
+				</div>
+			</div>
+		</section>
+
+		<hr />
 
 		<section class="resume-section [&_ul]:list-disc" id="experience">
 			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Work Experience</h2>
@@ -214,59 +255,6 @@ import LanguageItem from "@/components/LanguageItem.vue";
 
 		<hr class="m-0" />
 
-		<section class="resume-section" id="skills">
-			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Skills</h2>
-
-			<div class="flex flex-col gap-y-10">
-				<div class="grid grid-cols-3 gap-3 lg:grid-cols-6 lg:gap-6">
-					<TechItem tech="Laravel" icon="fa-laravel" :recency="40" :proficiency="75" />
-					<TechItem tech="React" icon="fa-react" :recency="60" :proficiency="90" />
-					<TechItem tech="Vue.js" icon="fa-vuejs" :recency="80" :proficiency="80" />
-					<TechItem tech="Angular" icon="fa-angular" :recency="15" :proficiency="66" />
-					<TechItem tech="Svelte" :recency="90" :proficiency="95" />
-					<TechItem tech="Solid" :recency="100" :proficiency="99" />
-				</div>
-
-				<div class="grid grid-cols-3 gap-3 lg:grid-cols-6 lg:gap-6">
-					<TechItem tech="JavaScript" icon="fa-js-square" :recency="99" :proficiency="99" />
-					<TechItem tech="PHP" icon="fa-php" :recency="45" :proficiency="90" />
-					<TechItem tech="Java" icon="fa-java" :recency="38" :proficiency="80" />
-					<TechItem tech="Python" icon="fa-python" :recency="80" :proficiency="80" />
-					<TechItem tech="Rust" icon="fa-rust" :recency="70" :proficiency="75" />
-					<TechItem tech="C#" :recency="15" :proficiency="66" />
-				</div>
-
-				<div class="grid grid-cols-3 gap-3 lg:grid-cols-6 lg:gap-6">
-					<TechItem tech="HTML5" icon="fa-html5" :recency="99" :proficiency="99" />
-					<TechItem tech="CSS3" icon="fa-css3-alt" :recency="95" :proficiency="90" />
-					<TechItem tech="NPM" icon="fa-npm" :recency="99" :proficiency="95" />
-					<TechItem tech="Node.js" icon="fa-node-js" :recency="99" :proficiency="90" />
-				</div>
-			</div>
-
-			<div class="subheading mb-3">Workflow</div>
-			<ul class="fa-ul mb-0">
-				<li>
-					<span class="fa-li"><i class="fas fa-check"></i></span>
-					Mobile-First, Responsive Design
-				</li>
-				<li>
-					<span class="fa-li"><i class="fas fa-check"></i></span>
-					Cross Browser Testing & Debugging
-				</li>
-				<li>
-					<span class="fa-li"><i class="fas fa-check"></i></span>
-					Cross Functional Teams
-				</li>
-				<li>
-					<span class="fa-li"><i class="fas fa-check"></i></span>
-					Agile Development & Scrum
-				</li>
-			</ul>
-		</section>
-
-		<hr class="m-0" />
-
 		<section class="resume-section" id="languages">
 			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Languages</h2>
 
@@ -277,6 +265,43 @@ import LanguageItem from "@/components/LanguageItem.vue";
 				<LanguageItem lang="French" :level="25" :inList="true" class="hidden" />
 			</ul>
 		</section>
+
+		<hr class="m-0" />
+
+		<section class="resume-section" id="merits">
+			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Merits</h2>
+
+			<ul class="fa-ul mb-0 text-lg">
+				<TrophyItem
+					place="1st Place (Solo)"
+					entity="Colégio Manuel Bernardes (High School)"
+					subject="IIT Java Programming Competition"
+					timeline="2001 & 2002"
+					:inList="true"
+				/>
+				<TrophyItem
+					place="3rd Place (Team)"
+					entity="FCT - Universidade Nova de Lisboa"
+					subject="Hackathon"
+					timeline="2005"
+					:inList="true"
+				/>
+				<TrophyItem
+					place="2nd Place (Team of 2)"
+					entity="FCT - Universidade Nova de Lisboa"
+					subject="Introductory Robotics Jam"
+					timeline="2005"
+					:inList="true"
+				/>
+				<CertificateItem
+					subject="Analytics Developer & UX Design Certificates Enrollee"
+					entity="Google"
+					timeline="Ongoing"
+					:inList="true"
+				/>
+			</ul>
+		</section>
+
 		<hr class="m-0" />
 
 		<section class="resume-section" id="interests">
@@ -338,42 +363,6 @@ import LanguageItem from "@/components/LanguageItem.vue";
 					</template>
 				</InterestItem>
 			</div>
-		</section>
-
-		<hr class="m-0" />
-
-		<section class="resume-section" id="merits">
-			<h2 class="mb-5 text-5xl text-green-900/90 uppercase font-[700]">Merits</h2>
-
-			<ul class="fa-ul mb-0 text-lg">
-				<TrophyItem
-					place="1st Place (Solo)"
-					entity="Colégio Manuel Bernardes (High School)"
-					subject="IIT Java Programming Competition"
-					timeline="2001 & 2002"
-					:inList="true"
-				/>
-				<TrophyItem
-					place="3rd Place (Team)"
-					entity="FCT - Universidade Nova de Lisboa"
-					subject="Hackathon"
-					timeline="2005"
-					:inList="true"
-				/>
-				<TrophyItem
-					place="2nd Place (Team of 2)"
-					entity="FCT - Universidade Nova de Lisboa"
-					subject="Introductory Robotics Jam"
-					timeline="2005"
-					:inList="true"
-				/>
-				<CertificateItem
-					subject="Analytics Developer & UX Design Certificates Enrollee"
-					entity="Google"
-					timeline="Ongoing"
-					:inList="true"
-				/>
-			</ul>
 		</section>
 	</main>
 </template>
